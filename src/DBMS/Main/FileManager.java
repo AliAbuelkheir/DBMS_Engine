@@ -1,5 +1,3 @@
-package DBMS;
-
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -72,7 +70,7 @@ public class FileManager
 		try {
 			TimeUnit.MILLISECONDS.sleep(1);
 		} catch (InterruptedException e1) {
-			
+
 		}
 		File tableDirectory = new File(directory, tableName);
 		tableDirectory.mkdir();

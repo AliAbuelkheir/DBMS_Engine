@@ -1,33 +1,34 @@
-import static org.junit.Assert.assertTrue;
+import org.junit.Assert;
 import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.Collections;
+
 import org.junit.Test;
-import DBMS.FileManager;
+
 public class DBAppTests
 {
 
 	@Test(timeout = 10000)
 	public void test0TableFolderCreationDBApp() throws Exception
 	{
-		DBMS.FileManager.reset();
+		FileManager.reset();
 	
 		String[] cols0 = {"g478b","v2ywj"};
 		DBApp.createTable("sr", cols0);
-		String fileManagerTrace0 = DBMS.FileManager.trace();
-		assertTrue("A folder should be created for each table.", fileManagerTrace0.contains("sr"));
+		String fileManagerTrace0 = FileManager.trace();
+		Assert.assertTrue("A folder should be created for each table.", fileManagerTrace0.contains("sr"));
 		String[] cols1 = {"ylv01","whw","ga","h89","w19","x26"};
 		DBApp.createTable("tu2", cols1);
 		String fileManagerTrace1 = FileManager.trace();
-		assertTrue("A folder should be created for each table.", fileManagerTrace1.contains("tu2"));
+		Assert.assertTrue("A folder should be created for each table.", fileManagerTrace1.contains("tu2"));
 		String[] cols2 = {"bbxsd","sm9pt","cf1t","n27","m82c5"};
 		DBApp.createTable("y348", cols2);
 		String fileManagerTrace2 = FileManager.trace();
-		assertTrue("A folder should be created for each table.", fileManagerTrace2.contains("y348"));
+		Assert.assertTrue("A folder should be created for each table.", fileManagerTrace2.contains("y348"));
 		String[] cols3 = {"kuw","e9c92","z8t","kb","bc"};
 		DBApp.createTable("iuc", cols3);
 		String fileManagerTrace3 = FileManager.trace();
-		assertTrue("A folder should be created for each table.", fileManagerTrace3.contains("iuc"));
+		Assert.assertTrue("A folder should be created for each table.", fileManagerTrace3.contains("iuc"));
 	
 		FileManager.reset();
 	}
@@ -39,23 +40,23 @@ public class DBAppTests
 		String[] cols0 = {"v53"};
 		DBApp.createTable("d3sh", cols0);
 		String fileManagerTrace0 = FileManager.trace();
-		assertTrue("A folder should be created for each table.", fileManagerTrace0.contains("d3sh.db"));
+		Assert.assertTrue("A folder should be created for each table.", fileManagerTrace0.contains("d3sh.db"));
 		String[] cols1 = {"fj5"};
 		DBApp.createTable("kt", cols1);
 		String fileManagerTrace1 = FileManager.trace();
-		assertTrue("A folder should be created for each table.", fileManagerTrace1.contains("kt.db"));
+		Assert.assertTrue("A folder should be created for each table.", fileManagerTrace1.contains("kt.db"));
 		String[] cols2 = {"d40","n20","sm1","t1b0","dij","q16","e42c","pk9k"};
 		DBApp.createTable("v905w", cols2);
 		String fileManagerTrace2 = FileManager.trace();
-		assertTrue("A folder should be created for each table.", fileManagerTrace2.contains("v905w.db"));
+		Assert.assertTrue("A folder should be created for each table.", fileManagerTrace2.contains("v905w.db"));
 		String[] cols3 = {"xg188","q7l","cb","ou","x2","x8b0","dlsa5","x1","ov1pu","yu5"};
 		DBApp.createTable("yj65", cols3);
 		String fileManagerTrace3 = FileManager.trace();
-		assertTrue("A folder should be created for each table.", fileManagerTrace3.contains("yj65.db"));
+		Assert.assertTrue("A folder should be created for each table.", fileManagerTrace3.contains("yj65.db"));
 		String[] cols4 = {"b3t","zr7","h65p1","px"};
 		DBApp.createTable("ae", cols4);
 		String fileManagerTrace4 = FileManager.trace();
-		assertTrue("A folder should be created for each table.", fileManagerTrace4.contains("ae.db"));
+		Assert.assertTrue("A folder should be created for each table.", fileManagerTrace4.contains("ae.db"));
 	
 		FileManager.reset();
 	}
@@ -67,18 +68,18 @@ public class DBAppTests
 		String[] cols0 = {"inbp9","xn87","v6vg"};
 		DBApp.createTable("h06h", cols0);
 		String tableTrace0 = DBApp.getLastTrace("h06h");
-		assertTrue("The trace String inside a table should contain its name.", tableTrace0.contains("h06h"));
+		Assert.assertTrue("The trace String inside a table should contain its name.", tableTrace0.contains("h06h"));
 		for(int i=0;i<cols0.length;i++)
 		{
-			assertTrue("The trace String inside a table should contain its columns names.", tableTrace0.contains(cols0[i]));
+			Assert.assertTrue("The trace String inside a table should contain its columns names.", tableTrace0.contains(cols0[i]));
 		}
 		String[] cols1 = {"r9pe","f2c","dtq0","j4","a249","y6k"};
 		DBApp.createTable("li3", cols1);
 		String tableTrace1 = DBApp.getLastTrace("li3");
-		assertTrue("The trace String inside a table should contain its name.", tableTrace1.contains("li3"));
+		Assert.assertTrue("The trace String inside a table should contain its name.", tableTrace1.contains("li3"));
 		for(int i=0;i<cols1.length;i++)
 		{
-			assertTrue("The trace String inside a table should contain its columns names.", tableTrace1.contains(cols1[i]));
+			Assert.assertTrue("The trace String inside a table should contain its columns names.", tableTrace1.contains(cols1[i]));
 		}
 	
 		FileManager.reset();
@@ -107,7 +108,7 @@ public class DBAppTests
 			}
 			Collections.sort(res_n01);
 			String pagesTraceString_n01 = "n01{ " + String.join(" ",res_n01);	String fileManagerTrace0 = FileManager.trace();
-		assertTrue("Pages should be stored inside the folder of the table when records are in inserted.("+pagesTraceString_n01+")", fileManagerTrace0.contains(pagesTraceString_n01));
+		Assert.assertTrue("Pages should be stored inside the folder of the table when records are in inserted.("+pagesTraceString_n01+")", fileManagerTrace0.contains(pagesTraceString_n01));
 		//--------------------------------------------------------------------------
 		String[] cols1 = {"hb6yl","p935m","tl","nz5","t0","p2qaz","ef"};
 		DBApp.createTable("a13", cols1);
@@ -128,7 +129,7 @@ public class DBAppTests
 			}
 			Collections.sort(res_a13);
 			String pagesTraceString_a13 = "a13{ " + String.join(" ",res_a13);	String fileManagerTrace1 = FileManager.trace();
-		assertTrue("Pages should be stored inside the folder of the table when records are in inserted.("+pagesTraceString_a13+")", fileManagerTrace1.contains(pagesTraceString_a13));
+		Assert.assertTrue("Pages should be stored inside the folder of the table when records are in inserted.("+pagesTraceString_a13+")", fileManagerTrace1.contains(pagesTraceString_a13));
 		//--------------------------------------------------------------------------
 		String[] cols2 = {"jpa","gw"};
 		DBApp.createTable("tg", cols2);
@@ -149,7 +150,7 @@ public class DBAppTests
 			}
 			Collections.sort(res_tg);
 			String pagesTraceString_tg = "tg{ " + String.join(" ",res_tg);	String fileManagerTrace2 = FileManager.trace();
-		assertTrue("Pages should be stored inside the folder of the table when records are in inserted.("+pagesTraceString_tg+")", fileManagerTrace2.contains(pagesTraceString_tg));
+		Assert.assertTrue("Pages should be stored inside the folder of the table when records are in inserted.("+pagesTraceString_tg+")", fileManagerTrace2.contains(pagesTraceString_tg));
 		//--------------------------------------------------------------------------
 		String[] cols3 = {"p33","d4ce","qv8b","yin9c","r4l3g"};
 		DBApp.createTable("q0x8", cols3);
@@ -170,7 +171,7 @@ public class DBAppTests
 			}
 			Collections.sort(res_q0x8);
 			String pagesTraceString_q0x8 = "q0x8{ " + String.join(" ",res_q0x8);	String fileManagerTrace3 = FileManager.trace();
-		assertTrue("Pages should be stored inside the folder of the table when records are in inserted.("+pagesTraceString_q0x8+")", fileManagerTrace3.contains(pagesTraceString_q0x8));
+		Assert.assertTrue("Pages should be stored inside the folder of the table when records are in inserted.("+pagesTraceString_q0x8+")", fileManagerTrace3.contains(pagesTraceString_q0x8));
 		//--------------------------------------------------------------------------
 	
 		FileManager.reset();
@@ -191,7 +192,7 @@ public class DBAppTests
 			}
 			DBApp.insert("q6x", records_q6x[i]);
 			String tableTrace0 = DBApp.getLastTrace("q6x");
-			assertTrue("Inserted records should appear in the table trace.("+Arrays.toString(records_q6x[i])+")", tableTrace0.contains(Arrays.toString(records_q6x[i])));
+			Assert.assertTrue("Inserted records should appear in the table trace.("+Arrays.toString(records_q6x[i])+")", tableTrace0.contains(Arrays.toString(records_q6x[i])));
 		}
 		//--------------------------------------------------------------------------
 		String[] cols1 = {"iq6","thq","mdd"};
@@ -205,7 +206,7 @@ public class DBAppTests
 			}
 			DBApp.insert("wos1", records_wos1[i]);
 			String tableTrace1 = DBApp.getLastTrace("wos1");
-			assertTrue("Inserted records should appear in the table trace.("+Arrays.toString(records_wos1[i])+")", tableTrace1.contains(Arrays.toString(records_wos1[i])));
+			Assert.assertTrue("Inserted records should appear in the table trace.("+Arrays.toString(records_wos1[i])+")", tableTrace1.contains(Arrays.toString(records_wos1[i])));
 		}
 		//--------------------------------------------------------------------------
 		String[] cols2 = {"vo","v0rr","b8b","d5","u8t4k","h7c","j75"};
@@ -219,7 +220,7 @@ public class DBAppTests
 			}
 			DBApp.insert("d9yy", records_d9yy[i]);
 			String tableTrace2 = DBApp.getLastTrace("d9yy");
-			assertTrue("Inserted records should appear in the table trace.("+Arrays.toString(records_d9yy[i])+")", tableTrace2.contains(Arrays.toString(records_d9yy[i])));
+			Assert.assertTrue("Inserted records should appear in the table trace.("+Arrays.toString(records_d9yy[i])+")", tableTrace2.contains(Arrays.toString(records_d9yy[i])));
 		}
 		//--------------------------------------------------------------------------
 		String[] cols3 = {"qw","o8mn","cs"};
@@ -233,7 +234,7 @@ public class DBAppTests
 			}
 			DBApp.insert("j2w", records_j2w[i]);
 			String tableTrace3 = DBApp.getLastTrace("j2w");
-			assertTrue("Inserted records should appear in the table trace.("+Arrays.toString(records_j2w[i])+")", tableTrace3.contains(Arrays.toString(records_j2w[i])));
+			Assert.assertTrue("Inserted records should appear in the table trace.("+Arrays.toString(records_j2w[i])+")", tableTrace3.contains(Arrays.toString(records_j2w[i])));
 		}
 		//--------------------------------------------------------------------------
 		String[] cols4 = {"y1o96","v733n"};
@@ -247,7 +248,7 @@ public class DBAppTests
 			}
 			DBApp.insert("r6p2", records_r6p2[i]);
 			String tableTrace4 = DBApp.getLastTrace("r6p2");
-			assertTrue("Inserted records should appear in the table trace.("+Arrays.toString(records_r6p2[i])+")", tableTrace4.contains(Arrays.toString(records_r6p2[i])));
+			Assert.assertTrue("Inserted records should appear in the table trace.("+Arrays.toString(records_r6p2[i])+")", tableTrace4.contains(Arrays.toString(records_r6p2[i])));
 		}
 		//--------------------------------------------------------------------------
 	
@@ -272,7 +273,7 @@ public class DBAppTests
 		ArrayList<String []> tableSelect0 = DBApp.select("z0p8");
 		for(int i=0;i<24;i++)
 		{
-			assertTrue("Inserted and selected records should be equivelent.", Arrays.toString(tableSelect0.get(i)).equals(Arrays.toString(records_z0p8[i])));
+			Assert.assertTrue("Inserted and selected records should be equivelent.", Arrays.toString(tableSelect0.get(i)).equals(Arrays.toString(records_z0p8[i])));
 		}
 		//--------------------------------------------------------------------------
 	
@@ -296,11 +297,11 @@ public class DBAppTests
 		}
 		DBApp.select("ooj88");
 		String selectTrace0 = DBApp.getLastTrace("ooj88");
-		assertTrue("Conditionless selection trace should start with the keyword -Select all-.", selectTrace0.startsWith("Select all"));
+		Assert.assertTrue("Conditionless selection trace should start with the keyword -Select all-.", selectTrace0.startsWith("Select all"));
 		int pageCount0 = (int)Math.ceil(26.0/DBApp.dataPageSize);
-		assertTrue("Conditionless selection trace should report the number of pages correctly.", selectTrace0.contains("pages:"+pageCount0));
-		assertTrue("Conditionless selection trace should report the number of records correctly.", selectTrace0.contains("records:"+26));
-		assertTrue("Conditionless selection trace should report the execution time.", selectTrace0.contains("execution time"));
+		Assert.assertTrue("Conditionless selection trace should report the number of pages correctly.", selectTrace0.contains("pages:"+pageCount0));
+		Assert.assertTrue("Conditionless selection trace should report the number of records correctly.", selectTrace0.contains("records:"+26));
+		Assert.assertTrue("Conditionless selection trace should report the execution time.", selectTrace0.contains("execution time"));
 		//--------------------------------------------------------------------------
 		String[] cols1 = {"a","b"};
 		DBApp.createTable("x42", cols1);
@@ -315,11 +316,11 @@ public class DBAppTests
 		}
 		DBApp.select("x42");
 		String selectTrace1 = DBApp.getLastTrace("x42");
-		assertTrue("Conditionless selection trace should start with the keyword -Select all-.", selectTrace1.startsWith("Select all"));
+		Assert.assertTrue("Conditionless selection trace should start with the keyword -Select all-.", selectTrace1.startsWith("Select all"));
 		int pageCount1 = (int)Math.ceil(87.0/DBApp.dataPageSize);
-		assertTrue("Conditionless selection trace should report the number of pages correctly.", selectTrace1.contains("pages:"+pageCount1));
-		assertTrue("Conditionless selection trace should report the number of records correctly.", selectTrace1.contains("records:"+87));
-		assertTrue("Conditionless selection trace should report the execution time.", selectTrace1.contains("execution time"));
+		Assert.assertTrue("Conditionless selection trace should report the number of pages correctly.", selectTrace1.contains("pages:"+pageCount1));
+		Assert.assertTrue("Conditionless selection trace should report the number of records correctly.", selectTrace1.contains("records:"+87));
+		Assert.assertTrue("Conditionless selection trace should report the execution time.", selectTrace1.contains("execution time"));
 		//--------------------------------------------------------------------------
 		String[] cols2 = {"a","b"};
 		DBApp.createTable("q82bn", cols2);
@@ -334,11 +335,11 @@ public class DBAppTests
 		}
 		DBApp.select("q82bn");
 		String selectTrace2 = DBApp.getLastTrace("q82bn");
-		assertTrue("Conditionless selection trace should start with the keyword -Select all-.", selectTrace2.startsWith("Select all"));
+		Assert.assertTrue("Conditionless selection trace should start with the keyword -Select all-.", selectTrace2.startsWith("Select all"));
 		int pageCount2 = (int)Math.ceil(42.0/DBApp.dataPageSize);
-		assertTrue("Conditionless selection trace should report the number of pages correctly.", selectTrace2.contains("pages:"+pageCount2));
-		assertTrue("Conditionless selection trace should report the number of records correctly.", selectTrace2.contains("records:"+42));
-		assertTrue("Conditionless selection trace should report the execution time.", selectTrace2.contains("execution time"));
+		Assert.assertTrue("Conditionless selection trace should report the number of pages correctly.", selectTrace2.contains("pages:"+pageCount2));
+		Assert.assertTrue("Conditionless selection trace should report the number of records correctly.", selectTrace2.contains("records:"+42));
+		Assert.assertTrue("Conditionless selection trace should report the execution time.", selectTrace2.contains("execution time"));
 		//--------------------------------------------------------------------------
 		String[] cols3 = {"a","b","c","d"};
 		DBApp.createTable("d5", cols3);
@@ -353,11 +354,11 @@ public class DBAppTests
 		}
 		DBApp.select("d5");
 		String selectTrace3 = DBApp.getLastTrace("d5");
-		assertTrue("Conditionless selection trace should start with the keyword -Select all-.", selectTrace3.startsWith("Select all"));
+		Assert.assertTrue("Conditionless selection trace should start with the keyword -Select all-.", selectTrace3.startsWith("Select all"));
 		int pageCount3 = (int)Math.ceil(54.0/DBApp.dataPageSize);
-		assertTrue("Conditionless selection trace should report the number of pages correctly.", selectTrace3.contains("pages:"+pageCount3));
-		assertTrue("Conditionless selection trace should report the number of records correctly.", selectTrace3.contains("records:"+54));
-		assertTrue("Conditionless selection trace should report the execution time.", selectTrace3.contains("execution time"));
+		Assert.assertTrue("Conditionless selection trace should report the number of pages correctly.", selectTrace3.contains("pages:"+pageCount3));
+		Assert.assertTrue("Conditionless selection trace should report the number of records correctly.", selectTrace3.contains("records:"+54));
+		Assert.assertTrue("Conditionless selection trace should report the execution time.", selectTrace3.contains("execution time"));
 		//--------------------------------------------------------------------------
 	
 		FileManager.reset();
@@ -383,7 +384,7 @@ public class DBAppTests
 		for(int i=0;i<5;i++)
 		{
 			ArrayList<String[]> tableSelect0 = DBApp.select("v5g",pageCount0,recordCount0);
-			assertTrue("Inserted and selected by pointests records should be equivelent.", Arrays.toString(tableSelect0.get(0)).equals(Arrays.toString(records_v5g[i])));
+			Assert.assertTrue("Inserted and selected by pointests records should be equivelent.", Arrays.toString(tableSelect0.get(0)).equals(Arrays.toString(records_v5g[i])));
 			recordCount0++;
 			if(recordCount0==DBApp.dataPageSize)
 			{
@@ -408,7 +409,7 @@ public class DBAppTests
 		for(int i=0;i<35;i++)
 		{
 			ArrayList<String[]> tableSelect1 = DBApp.select("r8",pageCount1,recordCount1);
-			assertTrue("Inserted and selected by pointests records should be equivelent.", Arrays.toString(tableSelect1.get(0)).equals(Arrays.toString(records_r8[i])));
+			Assert.assertTrue("Inserted and selected by pointests records should be equivelent.", Arrays.toString(tableSelect1.get(0)).equals(Arrays.toString(records_r8[i])));
 			recordCount1++;
 			if(recordCount1==DBApp.dataPageSize)
 			{
@@ -433,7 +434,7 @@ public class DBAppTests
 		for(int i=0;i<78;i++)
 		{
 			ArrayList<String[]> tableSelect2 = DBApp.select("ml",pageCount2,recordCount2);
-			assertTrue("Inserted and selected by pointests records should be equivelent.", Arrays.toString(tableSelect2.get(0)).equals(Arrays.toString(records_ml[i])));
+			Assert.assertTrue("Inserted and selected by pointests records should be equivelent.", Arrays.toString(tableSelect2.get(0)).equals(Arrays.toString(records_ml[i])));
 			recordCount2++;
 			if(recordCount2==DBApp.dataPageSize)
 			{
@@ -458,7 +459,7 @@ public class DBAppTests
 		for(int i=0;i<68;i++)
 		{
 			ArrayList<String[]> tableSelect3 = DBApp.select("gej9",pageCount3,recordCount3);
-			assertTrue("Inserted and selected by pointests records should be equivelent.", Arrays.toString(tableSelect3.get(0)).equals(Arrays.toString(records_gej9[i])));
+			Assert.assertTrue("Inserted and selected by pointests records should be equivelent.", Arrays.toString(tableSelect3.get(0)).equals(Arrays.toString(records_gej9[i])));
 			recordCount3++;
 			if(recordCount3==DBApp.dataPageSize)
 			{
@@ -483,7 +484,7 @@ public class DBAppTests
 		for(int i=0;i<52;i++)
 		{
 			ArrayList<String[]> tableSelect4 = DBApp.select("m06",pageCount4,recordCount4);
-			assertTrue("Inserted and selected by pointests records should be equivelent.", Arrays.toString(tableSelect4.get(0)).equals(Arrays.toString(records_m06[i])));
+			Assert.assertTrue("Inserted and selected by pointests records should be equivelent.", Arrays.toString(tableSelect4.get(0)).equals(Arrays.toString(records_m06[i])));
 			recordCount4++;
 			if(recordCount4==DBApp.dataPageSize)
 			{
@@ -517,10 +518,10 @@ public class DBAppTests
 		{
 			DBApp.select("y4",pageCount0,recordCount0);
 			String selectTrace0 = DBApp.getLastTrace("y4");
-			assertTrue("Pointer selection trace should start with the keyword -Select pointer-.", selectTrace0.startsWith("Select pointer"));
-			assertTrue("Pointer selection trace should report the number of the page correctly.", selectTrace0.contains("page:"+pageCount0));
-			assertTrue("Pointer selection trace should report the number of the record correctly.", selectTrace0.contains("record:"+recordCount0));
-			assertTrue("Pointer selection trace should report the execution time.", selectTrace0.contains("execution time"));
+			Assert.assertTrue("Pointer selection trace should start with the keyword -Select pointer-.", selectTrace0.startsWith("Select pointer"));
+			Assert.assertTrue("Pointer selection trace should report the number of the page correctly.", selectTrace0.contains("page:"+pageCount0));
+			Assert.assertTrue("Pointer selection trace should report the number of the record correctly.", selectTrace0.contains("record:"+recordCount0));
+			Assert.assertTrue("Pointer selection trace should report the execution time.", selectTrace0.contains("execution time"));
 			recordCount0++;
 			if(recordCount0==DBApp.dataPageSize)
 			{
@@ -546,10 +547,10 @@ public class DBAppTests
 		{
 			DBApp.select("obloo",pageCount1,recordCount1);
 			String selectTrace1 = DBApp.getLastTrace("obloo");
-			assertTrue("Pointer selection trace should start with the keyword -Select pointer-.", selectTrace1.startsWith("Select pointer"));
-			assertTrue("Pointer selection trace should report the number of the page correctly.", selectTrace1.contains("page:"+pageCount1));
-			assertTrue("Pointer selection trace should report the number of the record correctly.", selectTrace1.contains("record:"+recordCount1));
-			assertTrue("Pointer selection trace should report the execution time.", selectTrace1.contains("execution time"));
+			Assert.assertTrue("Pointer selection trace should start with the keyword -Select pointer-.", selectTrace1.startsWith("Select pointer"));
+			Assert.assertTrue("Pointer selection trace should report the number of the page correctly.", selectTrace1.contains("page:"+pageCount1));
+			Assert.assertTrue("Pointer selection trace should report the number of the record correctly.", selectTrace1.contains("record:"+recordCount1));
+			Assert.assertTrue("Pointer selection trace should report the execution time.", selectTrace1.contains("execution time"));
 			recordCount1++;
 			if(recordCount1==DBApp.dataPageSize)
 			{
@@ -575,10 +576,10 @@ public class DBAppTests
 		{
 			DBApp.select("r3v",pageCount2,recordCount2);
 			String selectTrace2 = DBApp.getLastTrace("r3v");
-			assertTrue("Pointer selection trace should start with the keyword -Select pointer-.", selectTrace2.startsWith("Select pointer"));
-			assertTrue("Pointer selection trace should report the number of the page correctly.", selectTrace2.contains("page:"+pageCount2));
-			assertTrue("Pointer selection trace should report the number of the record correctly.", selectTrace2.contains("record:"+recordCount2));
-			assertTrue("Pointer selection trace should report the execution time.", selectTrace2.contains("execution time"));
+			Assert.assertTrue("Pointer selection trace should start with the keyword -Select pointer-.", selectTrace2.startsWith("Select pointer"));
+			Assert.assertTrue("Pointer selection trace should report the number of the page correctly.", selectTrace2.contains("page:"+pageCount2));
+			Assert.assertTrue("Pointer selection trace should report the number of the record correctly.", selectTrace2.contains("record:"+recordCount2));
+			Assert.assertTrue("Pointer selection trace should report the execution time.", selectTrace2.contains("execution time"));
 			recordCount2++;
 			if(recordCount2==DBApp.dataPageSize)
 			{
@@ -604,10 +605,10 @@ public class DBAppTests
 		{
 			DBApp.select("hw",pageCount3,recordCount3);
 			String selectTrace3 = DBApp.getLastTrace("hw");
-			assertTrue("Pointer selection trace should start with the keyword -Select pointer-.", selectTrace3.startsWith("Select pointer"));
-			assertTrue("Pointer selection trace should report the number of the page correctly.", selectTrace3.contains("page:"+pageCount3));
-			assertTrue("Pointer selection trace should report the number of the record correctly.", selectTrace3.contains("record:"+recordCount3));
-			assertTrue("Pointer selection trace should report the execution time.", selectTrace3.contains("execution time"));
+			Assert.assertTrue("Pointer selection trace should start with the keyword -Select pointer-.", selectTrace3.startsWith("Select pointer"));
+			Assert.assertTrue("Pointer selection trace should report the number of the page correctly.", selectTrace3.contains("page:"+pageCount3));
+			Assert.assertTrue("Pointer selection trace should report the number of the record correctly.", selectTrace3.contains("record:"+recordCount3));
+			Assert.assertTrue("Pointer selection trace should report the execution time.", selectTrace3.contains("execution time"));
 			recordCount3++;
 			if(recordCount3==DBApp.dataPageSize)
 			{
@@ -633,10 +634,10 @@ public class DBAppTests
 		{
 			DBApp.select("j7i2",pageCount4,recordCount4);
 			String selectTrace4 = DBApp.getLastTrace("j7i2");
-			assertTrue("Pointer selection trace should start with the keyword -Select pointer-.", selectTrace4.startsWith("Select pointer"));
-			assertTrue("Pointer selection trace should report the number of the page correctly.", selectTrace4.contains("page:"+pageCount4));
-			assertTrue("Pointer selection trace should report the number of the record correctly.", selectTrace4.contains("record:"+recordCount4));
-			assertTrue("Pointer selection trace should report the execution time.", selectTrace4.contains("execution time"));
+			Assert.assertTrue("Pointer selection trace should start with the keyword -Select pointer-.", selectTrace4.startsWith("Select pointer"));
+			Assert.assertTrue("Pointer selection trace should report the number of the page correctly.", selectTrace4.contains("page:"+pageCount4));
+			Assert.assertTrue("Pointer selection trace should report the number of the record correctly.", selectTrace4.contains("record:"+recordCount4));
+			Assert.assertTrue("Pointer selection trace should report the execution time.", selectTrace4.contains("execution time"));
 			recordCount4++;
 			if(recordCount4==DBApp.dataPageSize)
 			{
@@ -686,15 +687,15 @@ public class DBAppTests
 		//record2: [a5, b1, c2]
 		//record3: [a7, b1, c1]
 		//record4: [a9, b1, c0]
-		assertTrue("Conditional selection should return the correct number of records.", tableSelect0.size() == 80);
+		Assert.assertTrue("Conditional selection should return the correct number of records.", tableSelect0.size() == 80);
 		ArrayList<String> tableSelectStrings0 = new ArrayList<String>();
 		for(int i = 0; i < tableSelect0.size(); i++)
 			tableSelectStrings0.add(Arrays.toString(tableSelect0.get(i)));
-		assertTrue("Conditional selection should return the correct inserted record.", tableSelectStrings0.contains(Arrays.toString(new String[]{"a1","b1","c1"})));
-		assertTrue("Conditional selection should return the correct inserted record.", tableSelectStrings0.contains(Arrays.toString(new String[]{"a3","b1","c0"})));
-		assertTrue("Conditional selection should return the correct inserted record.", tableSelectStrings0.contains(Arrays.toString(new String[]{"a5","b1","c2"})));
-		assertTrue("Conditional selection should return the correct inserted record.", tableSelectStrings0.contains(Arrays.toString(new String[]{"a7","b1","c1"})));
-		assertTrue("Conditional selection should return the correct inserted record.", tableSelectStrings0.contains(Arrays.toString(new String[]{"a9","b1","c0"})));
+		Assert.assertTrue("Conditional selection should return the correct inserted record.", tableSelectStrings0.contains(Arrays.toString(new String[]{"a1","b1","c1"})));
+		Assert.assertTrue("Conditional selection should return the correct inserted record.", tableSelectStrings0.contains(Arrays.toString(new String[]{"a3","b1","c0"})));
+		Assert.assertTrue("Conditional selection should return the correct inserted record.", tableSelectStrings0.contains(Arrays.toString(new String[]{"a5","b1","c2"})));
+		Assert.assertTrue("Conditional selection should return the correct inserted record.", tableSelectStrings0.contains(Arrays.toString(new String[]{"a7","b1","c1"})));
+		Assert.assertTrue("Conditional selection should return the correct inserted record.", tableSelectStrings0.contains(Arrays.toString(new String[]{"a9","b1","c0"})));
 		//--------------------------------------------------------------------------
 		String[] cols1 = {"a","b"};
 		DBApp.createTable("xq", cols1);
@@ -729,15 +730,15 @@ public class DBAppTests
 		//record2: [a4, b0]
 		//record3: [a6, b0]
 		//record4: [a8, b0]
-		assertTrue("Conditional selection should return the correct number of records.", tableSelect1.size() == 163);
+		Assert.assertTrue("Conditional selection should return the correct number of records.", tableSelect1.size() == 163);
 		ArrayList<String> tableSelectStrings1 = new ArrayList<String>();
 		for(int i = 0; i < tableSelect1.size(); i++)
 			tableSelectStrings1.add(Arrays.toString(tableSelect1.get(i)));
-		assertTrue("Conditional selection should return the correct inserted record.", tableSelectStrings1.contains(Arrays.toString(new String[]{"a0","b0"})));
-		assertTrue("Conditional selection should return the correct inserted record.", tableSelectStrings1.contains(Arrays.toString(new String[]{"a2","b0"})));
-		assertTrue("Conditional selection should return the correct inserted record.", tableSelectStrings1.contains(Arrays.toString(new String[]{"a4","b0"})));
-		assertTrue("Conditional selection should return the correct inserted record.", tableSelectStrings1.contains(Arrays.toString(new String[]{"a6","b0"})));
-		assertTrue("Conditional selection should return the correct inserted record.", tableSelectStrings1.contains(Arrays.toString(new String[]{"a8","b0"})));
+		Assert.assertTrue("Conditional selection should return the correct inserted record.", tableSelectStrings1.contains(Arrays.toString(new String[]{"a0","b0"})));
+		Assert.assertTrue("Conditional selection should return the correct inserted record.", tableSelectStrings1.contains(Arrays.toString(new String[]{"a2","b0"})));
+		Assert.assertTrue("Conditional selection should return the correct inserted record.", tableSelectStrings1.contains(Arrays.toString(new String[]{"a4","b0"})));
+		Assert.assertTrue("Conditional selection should return the correct inserted record.", tableSelectStrings1.contains(Arrays.toString(new String[]{"a6","b0"})));
+		Assert.assertTrue("Conditional selection should return the correct inserted record.", tableSelectStrings1.contains(Arrays.toString(new String[]{"a8","b0"})));
 		//--------------------------------------------------------------------------
 		String[] cols2 = {"a","b","c","d","e","f"};
 		DBApp.createTable("kp7h7", cols2);
@@ -772,15 +773,15 @@ public class DBAppTests
 		//record2: [a5, b1, c2, d1, e0, f5]
 		//record3: [a7, b1, c1, d3, e2, f1]
 		//record4: [a9, b1, c0, d1, e4, f3]
-		assertTrue("Conditional selection should return the correct number of records.", tableSelect2.size() == 211);
+		Assert.assertTrue("Conditional selection should return the correct number of records.", tableSelect2.size() == 211);
 		ArrayList<String> tableSelectStrings2 = new ArrayList<String>();
 		for(int i = 0; i < tableSelect2.size(); i++)
 			tableSelectStrings2.add(Arrays.toString(tableSelect2.get(i)));
-		assertTrue("Conditional selection should return the correct inserted record.", tableSelectStrings2.contains(Arrays.toString(new String[]{"a1","b1","c1","d1","e1","f1"})));
-		assertTrue("Conditional selection should return the correct inserted record.", tableSelectStrings2.contains(Arrays.toString(new String[]{"a3","b1","c0","d3","e3","f3"})));
-		assertTrue("Conditional selection should return the correct inserted record.", tableSelectStrings2.contains(Arrays.toString(new String[]{"a5","b1","c2","d1","e0","f5"})));
-		assertTrue("Conditional selection should return the correct inserted record.", tableSelectStrings2.contains(Arrays.toString(new String[]{"a7","b1","c1","d3","e2","f1"})));
-		assertTrue("Conditional selection should return the correct inserted record.", tableSelectStrings2.contains(Arrays.toString(new String[]{"a9","b1","c0","d1","e4","f3"})));
+		Assert.assertTrue("Conditional selection should return the correct inserted record.", tableSelectStrings2.contains(Arrays.toString(new String[]{"a1","b1","c1","d1","e1","f1"})));
+		Assert.assertTrue("Conditional selection should return the correct inserted record.", tableSelectStrings2.contains(Arrays.toString(new String[]{"a3","b1","c0","d3","e3","f3"})));
+		Assert.assertTrue("Conditional selection should return the correct inserted record.", tableSelectStrings2.contains(Arrays.toString(new String[]{"a5","b1","c2","d1","e0","f5"})));
+		Assert.assertTrue("Conditional selection should return the correct inserted record.", tableSelectStrings2.contains(Arrays.toString(new String[]{"a7","b1","c1","d3","e2","f1"})));
+		Assert.assertTrue("Conditional selection should return the correct inserted record.", tableSelectStrings2.contains(Arrays.toString(new String[]{"a9","b1","c0","d1","e4","f3"})));
 		//--------------------------------------------------------------------------
 		String[] cols3 = {"a","b","c","d","e","f"};
 		DBApp.createTable("m6t1x", cols3);
@@ -815,15 +816,15 @@ public class DBAppTests
 		//record2: [a7, b1, c1, d3, e2, f1]
 		//record3: [a10, b0, c1, d2, e0, f4]
 		//record4: [a13, b1, c1, d1, e3, f1]
-		assertTrue("Conditional selection should return the correct number of records.", tableSelect3.size() == 85);
+		Assert.assertTrue("Conditional selection should return the correct number of records.", tableSelect3.size() == 85);
 		ArrayList<String> tableSelectStrings3 = new ArrayList<String>();
 		for(int i = 0; i < tableSelect3.size(); i++)
 			tableSelectStrings3.add(Arrays.toString(tableSelect3.get(i)));
-		assertTrue("Conditional selection should return the correct inserted record.", tableSelectStrings3.contains(Arrays.toString(new String[]{"a1","b1","c1","d1","e1","f1"})));
-		assertTrue("Conditional selection should return the correct inserted record.", tableSelectStrings3.contains(Arrays.toString(new String[]{"a4","b0","c1","d0","e4","f4"})));
-		assertTrue("Conditional selection should return the correct inserted record.", tableSelectStrings3.contains(Arrays.toString(new String[]{"a7","b1","c1","d3","e2","f1"})));
-		assertTrue("Conditional selection should return the correct inserted record.", tableSelectStrings3.contains(Arrays.toString(new String[]{"a10","b0","c1","d2","e0","f4"})));
-		assertTrue("Conditional selection should return the correct inserted record.", tableSelectStrings3.contains(Arrays.toString(new String[]{"a13","b1","c1","d1","e3","f1"})));
+		Assert.assertTrue("Conditional selection should return the correct inserted record.", tableSelectStrings3.contains(Arrays.toString(new String[]{"a1","b1","c1","d1","e1","f1"})));
+		Assert.assertTrue("Conditional selection should return the correct inserted record.", tableSelectStrings3.contains(Arrays.toString(new String[]{"a4","b0","c1","d0","e4","f4"})));
+		Assert.assertTrue("Conditional selection should return the correct inserted record.", tableSelectStrings3.contains(Arrays.toString(new String[]{"a7","b1","c1","d3","e2","f1"})));
+		Assert.assertTrue("Conditional selection should return the correct inserted record.", tableSelectStrings3.contains(Arrays.toString(new String[]{"a10","b0","c1","d2","e0","f4"})));
+		Assert.assertTrue("Conditional selection should return the correct inserted record.", tableSelectStrings3.contains(Arrays.toString(new String[]{"a13","b1","c1","d1","e3","f1"})));
 		//--------------------------------------------------------------------------
 		String[] cols4 = {"a","b","c","d","e"};
 		DBApp.createTable("mpm", cols4);
@@ -858,15 +859,15 @@ public class DBAppTests
 		//record2: [a5, b1, c2, d1, e0]
 		//record3: [a7, b1, c1, d3, e2]
 		//record4: [a9, b1, c0, d1, e4]
-		assertTrue("Conditional selection should return the correct number of records.", tableSelect4.size() == 55);
+		Assert.assertTrue("Conditional selection should return the correct number of records.", tableSelect4.size() == 55);
 		ArrayList<String> tableSelectStrings4 = new ArrayList<String>();
 		for(int i = 0; i < tableSelect4.size(); i++)
 			tableSelectStrings4.add(Arrays.toString(tableSelect4.get(i)));
-		assertTrue("Conditional selection should return the correct inserted record.", tableSelectStrings4.contains(Arrays.toString(new String[]{"a1","b1","c1","d1","e1"})));
-		assertTrue("Conditional selection should return the correct inserted record.", tableSelectStrings4.contains(Arrays.toString(new String[]{"a3","b1","c0","d3","e3"})));
-		assertTrue("Conditional selection should return the correct inserted record.", tableSelectStrings4.contains(Arrays.toString(new String[]{"a5","b1","c2","d1","e0"})));
-		assertTrue("Conditional selection should return the correct inserted record.", tableSelectStrings4.contains(Arrays.toString(new String[]{"a7","b1","c1","d3","e2"})));
-		assertTrue("Conditional selection should return the correct inserted record.", tableSelectStrings4.contains(Arrays.toString(new String[]{"a9","b1","c0","d1","e4"})));
+		Assert.assertTrue("Conditional selection should return the correct inserted record.", tableSelectStrings4.contains(Arrays.toString(new String[]{"a1","b1","c1","d1","e1"})));
+		Assert.assertTrue("Conditional selection should return the correct inserted record.", tableSelectStrings4.contains(Arrays.toString(new String[]{"a3","b1","c0","d3","e3"})));
+		Assert.assertTrue("Conditional selection should return the correct inserted record.", tableSelectStrings4.contains(Arrays.toString(new String[]{"a5","b1","c2","d1","e0"})));
+		Assert.assertTrue("Conditional selection should return the correct inserted record.", tableSelectStrings4.contains(Arrays.toString(new String[]{"a7","b1","c1","d3","e2"})));
+		Assert.assertTrue("Conditional selection should return the correct inserted record.", tableSelectStrings4.contains(Arrays.toString(new String[]{"a9","b1","c0","d1","e4"})));
 		//--------------------------------------------------------------------------
 	
 		FileManager.reset();
@@ -918,11 +919,11 @@ public class DBAppTests
 				pagesCounts0.add("["+i+", "+pageFrequency0[i]+"]");
 		}
 		String selectTrace0 = DBApp.getLastTrace("ar");
-		assertTrue("Conditional selection trace should start with the keyword -Select condition-.", selectTrace0.startsWith("Select condition"));
-		assertTrue("Conditional selection trace should report the condition of selection correctly.", selectTrace0.contains(Arrays.toString(ConditionColumns0)+"->"+Arrays.toString(ConditionColumnsValues0)));
-		assertTrue("Conditional selection trace should report the numbers of records per pages correctly.", selectTrace0.contains(pagesCounts0.toString()));
-		assertTrue("Conditional selection trace should report the number of records correctly.", selectTrace0.contains("records:"+1));
-		assertTrue("Conditional selection trace should report the execution time.", selectTrace0.contains("execution time"));
+		Assert.assertTrue("Conditional selection trace should start with the keyword -Select condition-.", selectTrace0.startsWith("Select condition"));
+		Assert.assertTrue("Conditional selection trace should report the condition of selection correctly.", selectTrace0.contains(Arrays.toString(ConditionColumns0)+"->"+Arrays.toString(ConditionColumnsValues0)));
+		Assert.assertTrue("Conditional selection trace should report the numbers of records per pages correctly.", selectTrace0.contains(pagesCounts0.toString()));
+		Assert.assertTrue("Conditional selection trace should report the number of records correctly.", selectTrace0.contains("records:"+1));
+		Assert.assertTrue("Conditional selection trace should report the execution time.", selectTrace0.contains("execution time"));
 		//--------------------------------------------------------------------------
 	
 		FileManager.reset();
@@ -957,8 +958,8 @@ public class DBAppTests
 	
 		String selectTrace0 = DBApp.getFullTrace("rc5");
 		String[] selectTraceArray0 = selectTrace0.split("\n");
-		assertTrue("Full trace should show the correct number of operations performed on a table.", selectTraceArray0.length == 193);
-		assertTrue("Last line in the full trace should report the number of pages and records correctly.", selectTraceArray0[selectTraceArray0.length-1].equals("Pages Count: "+pageCount0+", Records Count: 190"));
+		Assert.assertTrue("Full trace should show the correct number of operations performed on a table.", selectTraceArray0.length == 193);
+		Assert.assertTrue("Last line in the full trace should report the number of pages and records correctly.", selectTraceArray0[selectTraceArray0.length-1].equals("Pages Count: "+pageCount0+", Records Count: 190"));
 		//--------------------------------------------------------------------------
 		String[] cols1 = {"a","b","c","d","e","f","g","h","i","j","k","l","m"};
 		DBApp.createTable("c6", cols1);
@@ -1035,8 +1036,8 @@ public class DBAppTests
 	
 		String selectTrace1 = DBApp.getFullTrace("c6");
 		String[] selectTraceArray1 = selectTrace1.split("\n");
-		assertTrue("Full trace should show the correct number of operations performed on a table.", selectTraceArray1.length == 56);
-		assertTrue("Last line in the full trace should report the number of pages and records correctly.", selectTraceArray1[selectTraceArray1.length-1].equals("Pages Count: "+pageCount1+", Records Count: 39"));
+		Assert.assertTrue("Full trace should show the correct number of operations performed on a table.", selectTraceArray1.length == 56);
+		Assert.assertTrue("Last line in the full trace should report the number of pages and records correctly.", selectTraceArray1[selectTraceArray1.length-1].equals("Pages Count: "+pageCount1+", Records Count: 39"));
 		//--------------------------------------------------------------------------
 		String[] cols2 = {"a","b","c","d","e","f","g","h"};
 		DBApp.createTable("w0y", cols2);
@@ -1131,8 +1132,8 @@ public class DBAppTests
 	
 		String selectTrace2 = DBApp.getFullTrace("w0y");
 		String[] selectTraceArray2 = selectTrace2.split("\n");
-		assertTrue("Full trace should show the correct number of operations performed on a table.", selectTraceArray2.length == 402);
-		assertTrue("Last line in the full trace should report the number of pages and records correctly.", selectTraceArray2[selectTraceArray2.length-1].equals("Pages Count: "+pageCount2+", Records Count: 382"));
+		Assert.assertTrue("Full trace should show the correct number of operations performed on a table.", selectTraceArray2.length == 402);
+		Assert.assertTrue("Last line in the full trace should report the number of pages and records correctly.", selectTraceArray2[selectTraceArray2.length-1].equals("Pages Count: "+pageCount2+", Records Count: 382"));
 		//--------------------------------------------------------------------------
 		String[] cols3 = {"a","b","c"};
 		DBApp.createTable("n9", cols3);
@@ -1187,8 +1188,8 @@ public class DBAppTests
 	
 		String selectTrace3 = DBApp.getFullTrace("n9");
 		String[] selectTraceArray3 = selectTrace3.split("\n");
-		assertTrue("Full trace should show the correct number of operations performed on a table.", selectTraceArray3.length == 128);
-		assertTrue("Last line in the full trace should report the number of pages and records correctly.", selectTraceArray3[selectTraceArray3.length-1].equals("Pages Count: "+pageCount3+", Records Count: 117"));
+		Assert.assertTrue("Full trace should show the correct number of operations performed on a table.", selectTraceArray3.length == 128);
+		Assert.assertTrue("Last line in the full trace should report the number of pages and records correctly.", selectTraceArray3[selectTraceArray3.length-1].equals("Pages Count: "+pageCount3+", Records Count: 117"));
 		//--------------------------------------------------------------------------
 	
 		FileManager.reset();

@@ -4,51 +4,90 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fcb8b86e-3121-41ac-b97b-672cf8aea7eb" name="Changes" comment="" />
+    <list default="true" id="fcb8b86e-3121-41ac-b97b-672cf8aea7eb" name="Changes" comment="Finished Milestone 1 ( creating,selecting, inserting data )">
+      <change beforePath="$PROJECT_DIR$/.idea/DBMS_Engine.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/DBMS_Engine.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DBMS_Engine/DBApp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DBMS_Engine/DBMS/FileManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DBMS_Engine/DBMS/Page.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DBMS_Engine/DBMS/Table.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/DBMS_Engine/DBAppTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DBMS/Main/DBApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DBMS/Main/DBApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DBMS/Main/FileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DBMS/Main/FileManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DBMS/Main/Page.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DBMS/Main/Page.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DBMS/Main/Table.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DBMS/Main/Table.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DBMS/Tests/DBAppTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DBMS/Test/DBAppTests.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="Security Analysis" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 5
 }</component>
   <component name="ProjectId" id="2uU4eaBN173zZFtk8ZexzTYjbok" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Downloaded.Files.Path.Enabled": "true",
-    "JUnit.All in DBMS_Engine.executor": "Run",
-    "JUnit.DBAppTests.executor": "Run",
-    "JUnit.Unnamed.executor": "Run",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Ali/CS/Java Projects/DBMS_Engine",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15332031",
-    "project.structure.side.proportion": "0.2",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.DBApp.executor&quot;: &quot;Run&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;true&quot;,
+    &quot;JUnit.All in DBMS_Engine.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.DBAppTests.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.DBAppTests.test0TableFullTraceDBApp.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.DBAppTests13.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.DBMS in DBMS_Engine.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Unnamed.executor&quot;: &quot;Run&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.preview.features.used&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Ali/CS/Java Projects/DBMS_Engine&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15332031&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Ali\CS\Java Projects\DBMS_Engine\src\DBMS\Test" />
       <recent name="C:\Ali\CS\Java Projects\DBMS_Engine\src\DBMS\Main" />
       <recent name="C:\Ali\CS\Java Projects\DBMS_Engine\src\DBMS\Tests" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
   </component>
   <component name="RunManager" selected="JUnit.DBAppTests">
+    <configuration name="DBApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="DBApp" />
+      <module name="DBMS_Engine" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="All in DBMS_Engine" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="DBMS_Engine" />
       <option name="PACKAGE_NAME" value="" />
@@ -61,19 +100,45 @@
       <module name="DBMS_Engine" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="DBAppTests" />
+      <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="DBAppTests13" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DBMS_Engine" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="DBAppTests13" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DBAppTests.test0TableFullTraceDBApp" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DBMS_Engine" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="DBAppTests" />
+      <option name="METHOD_NAME" value="test0TableFullTraceDBApp" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
+      <item itemvalue="Application.DBApp" />
+      <item itemvalue="JUnit.DBAppTests.test0TableFullTraceDBApp" />
+      <item itemvalue="JUnit.DBAppTests13" />
       <item itemvalue="JUnit.DBAppTests" />
       <item itemvalue="JUnit.All in DBMS_Engine" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.DBAppTests" />
+        <item itemvalue="JUnit.DBAppTests.test0TableFullTraceDBApp" />
         <item itemvalue="JUnit.All in DBMS_Engine" />
+        <item itemvalue="JUnit.DBAppTests13" />
+        <item itemvalue="Application.DBApp" />
       </list>
     </recent_temporary>
   </component>
@@ -100,11 +165,31 @@
       <workItem from="1742290474928" duration="62000" />
       <workItem from="1742419985679" duration="358000" />
       <workItem from="1742421298176" duration="245000" />
-      <workItem from="1742421550349" duration="899000" />
+      <workItem from="1742421550349" duration="1757000" />
+      <workItem from="1743706117918" duration="6811000" />
+      <workItem from="1743963479914" duration="3914000" />
+      <workItem from="1743967446085" duration="391000" />
+      <workItem from="1743967846878" duration="1883000" />
+      <workItem from="1743969982397" duration="667000" />
+      <workItem from="1743970723755" duration="6018000" />
+      <workItem from="1743982599671" duration="348000" />
+      <workItem from="1743982960552" duration="9574000" />
+      <workItem from="1743993399993" duration="7953000" />
+      <workItem from="1744072725618" duration="6861000" />
+      <workItem from="1744165033903" duration="590000" />
+      <workItem from="1744542868586" duration="134000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Finished Milestone 1 ( creating,selecting, inserting data )" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished Milestone 1 ( creating,selecting, inserting data )" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
